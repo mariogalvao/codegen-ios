@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.9.1)
+  - SwaggerClient (0.0.1):
+    - Alamofire (~> 4.9.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.9.0)
+  - SwaggerClient (from `./codegen-api`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+
+EXTERNAL SOURCES:
+  SwaggerClient:
+    :path: "./codegen-api"
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  SwaggerClient: a559e2ed63705b1df297bfd97d3dd0c8d63ca0ff
+
+PODFILE CHECKSUM: adf664bf6a3ad2415efac630fabd34b2e2b8cebe
+
+COCOAPODS: 1.9.3

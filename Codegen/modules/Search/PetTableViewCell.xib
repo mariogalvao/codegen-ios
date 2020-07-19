@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PetTableViewCell" rowHeight="86" id="KGk-i7-Jjw" customClass="PetTableViewCell" customModule="Codegen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="jM3-lP-u0c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="2wZ-yc-zy9">
+                                <rect key="frame" x="24" y="12" width="62" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="QEJ-8Y-YSd"/>
+                                    <constraint firstAttribute="height" constant="62" id="ruX-S4-4Bg"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZpE-bp-k32">
+                                <rect key="frame" x="110" y="20" width="186" height="46.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8n-gC-7wW">
+                                        <rect key="frame" x="0.0" y="0.0" width="186" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7w-B7-SdK">
+                                        <rect key="frame" x="0.0" y="28.5" width="186" height="18"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <edgeInsets key="layoutMargins" top="12" left="24" bottom="12" right="24"/>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="jM3-lP-u0c" secondAttribute="bottom" id="1Ne-4y-7Nb"/>
+                    <constraint firstItem="jM3-lP-u0c" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="3dK-So-e41"/>
+                    <constraint firstAttribute="trailing" secondItem="jM3-lP-u0c" secondAttribute="trailing" id="McA-sF-mUl"/>
+                    <constraint firstItem="jM3-lP-u0c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vwE-lZ-mPF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="petImageView" destination="2wZ-yc-zy9" id="sT1-9Q-dVX"/>
+                <outlet property="subtitleLabel" destination="b7w-B7-SdK" id="b7O-WI-VPc"/>
+                <outlet property="titleLabel" destination="c8n-gC-7wW" id="LLD-BM-SNM"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="119.86607142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="dog" width="100" height="100"/>
+    </resources>
+</document>
