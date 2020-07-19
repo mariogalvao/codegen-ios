@@ -13,7 +13,12 @@ class SearchViewModel: ViewModel {
     
     private weak var viewControllerDelegate: SearchViewControllerProtocol?
     
-    var pets: [Pet] = []
+    var pets: [Pet] = [] {
+        didSet {
+            filteredPets = pets
+        }
+    }
+    var filteredPets: [Pet] = []
     
     init(viewControllerDelegate: SearchViewControllerProtocol) {
         self.viewControllerDelegate = viewControllerDelegate
@@ -46,15 +51,20 @@ extension SearchViewModel: SearchViewModelProtocol {
     }
     
     func getNumberOfPets() -> Int {
-        return pets.count
+        return filteredPets.count
     }
     
     func getPet(for index: Int) -> Pet {
-        return pets[index]
+        return filteredPets[index]
     }
     
     func updateSearchText(text: String) {
-        // TODO
+        if text.isEmpty {
+            filteredPets = pets
+        } else {
+            filteredPets = pets.filter({ $0.name.caseInsensitiveCompare(text) == .orderedSame || $0.name.caseInsensitiveCompare(text) == .orderedDescending })
+        }
+        viewControllerDelegate?.reloadPets()
     }
     
     func selectPet(index: Int) {

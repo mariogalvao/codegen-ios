@@ -20,10 +20,13 @@ class SearchViewController: ViewController {
         
         title = "Search Pets"
         
+        searchBar.delegate = self
+        
         tableView.register(UINib(nibName: "PetTableViewCell", bundle: nil), forCellReuseIdentifier: "PetTableViewCell")
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
+        tableView.keyboardDismissMode = .onDrag
         
         viewModelDelegate?.loadPets()
     }
@@ -48,6 +51,10 @@ extension SearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         viewModelDelegate?.updateSearchText(text: searchText)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
     
 }

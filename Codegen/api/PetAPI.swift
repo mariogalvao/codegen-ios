@@ -21,7 +21,7 @@ class PetAPI: API, PetAPIProtocol {
         
 //        let pet1 = Pet(_id: 1, category: nil, name: "Rex", photoUrls: [], tags: nil, status: .available)
 //        let pet2 = Pet(_id: 1, category: nil, name: "Doggie", photoUrls: [], tags: nil, status: .sold)
-//        let pet3 = Pet(_id: 1, category: nil, name: "Dolly", photoUrls: [], tags: nil, status: .sold)
+//        let pet3 = Pet(_id: 1, category: nil, name: "Dolly", photoUrls: [], tags: nil, status: .pending)
 //        let pets = [pet1, pet2, pet3]
 //        completion(.success(pets))
         

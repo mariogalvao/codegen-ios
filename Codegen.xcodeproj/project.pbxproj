@@ -166,6 +166,15 @@
 			path = enums;
 			sourceTree = "<group>";
 		};
+		D51347D824C4E7A700144F84 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				D51347D424C4BF1C00144F84 /* PetTableViewCell.swift */,
+				D51347D524C4BF1C00144F84 /* PetTableViewCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 		D5D7BA4924C3767F0072729B = {
 			isa = PBXGroup;
 			children = (
@@ -251,8 +260,7 @@
 				D5D7BA9024C37F990072729B /* SearchViewModel.swift */,
 				D5D7BA9224C37FB20072729B /* SearchViewController.swift */,
 				D5D7BA9324C37FB20072729B /* SearchViewController.xib */,
-				D51347D424C4BF1C00144F84 /* PetTableViewCell.swift */,
-				D51347D524C4BF1C00144F84 /* PetTableViewCell.xib */,
+				D51347D824C4E7A700144F84 /* cells */,
 			);
 			path = Search;
 			sourceTree = "<group>";
