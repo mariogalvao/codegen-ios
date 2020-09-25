@@ -16,15 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        if #available(iOS 13, *) {
-            // Nada a fazer, pois deve ser feito no Scene Delegate
-        } else {
-            let tabBarController = TabBarController()
-            window = UIWindow(frame: UIScreen.main.bounds)
-            window?.rootViewController = tabBarController
-            window?.makeKeyAndVisible()
-        }
-        
         return true
     }
 

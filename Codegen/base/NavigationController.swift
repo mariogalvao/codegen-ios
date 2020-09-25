@@ -14,6 +14,7 @@ class NavigationController: UINavigationController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        navigationBar.prefersLargeTitles = true
     }
 
 }

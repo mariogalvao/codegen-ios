@@ -10,6 +10,7 @@ import UIKit
 
 class SearchViewController: ViewController {
     
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
@@ -28,8 +29,24 @@ class SearchViewController: ViewController {
         tableView.tableFooterView = UIView()
         tableView.keyboardDismissMode = .onDrag
         
-        viewModelDelegate?.loadPets()
+        viewModelDelegate?.loadPets(by: .available)
     }
+    
+    // MARK: Actions
+    
+    @IBAction func segmentedControlChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            viewModelDelegate?.loadPets(by: .available)
+        case 1:
+            viewModelDelegate?.loadPets(by: .pending)
+        case 2:
+            viewModelDelegate?.loadPets(by: .sold)
+        default:
+            break
+        }
+    }
+    
 
 }
 

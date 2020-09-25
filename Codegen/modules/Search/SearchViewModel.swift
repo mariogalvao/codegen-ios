@@ -28,7 +28,7 @@ class SearchViewModel: ViewModel {
 
 protocol SearchViewModelProtocol: ViewModelProtocol {
     
-    func loadPets()
+    func loadPets(by status: PetStatus)
     func getNumberOfPets() -> Int
     func getPet(for index: Int) -> Pet
     func updateSearchText(text: String)
@@ -38,8 +38,8 @@ protocol SearchViewModelProtocol: ViewModelProtocol {
 
 extension SearchViewModel: SearchViewModelProtocol {
     
-    func loadPets() {
-        petApi.getPets(by: [.available, .pending, .sold]) { (result) in
+    func loadPets(by status: PetStatus) {
+        petApi.getPets(by: status) { (result) in
             switch result {
             case .success(let pets):
                 self.pets = pets

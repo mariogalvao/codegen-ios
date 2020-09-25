@@ -11,7 +11,7 @@ import UIKit
 class TabBarController: UITabBarController {
     
     var searchViewController: UINavigationController {
-        let icon = UIImage(named: "magnifyingglass")
+        let icon = UIImage.init(systemName: "magnifyingglass")
         let item = UITabBarItem(title: "Search Pets", image: icon, tag: 0)
         let viewController = SearchViewController()
         viewController.tabBarItem = item
@@ -23,7 +23,7 @@ class TabBarController: UITabBarController {
     }
     
     var addViewController: UINavigationController {
-        let icon = UIImage(named: "plus.circle")
+        let icon = UIImage.init(systemName: "plus.circle")
         let item = UITabBarItem(title: "Add Pet", image: icon, tag: 0)
         let viewController = AddViewController()
         viewController.tabBarItem = item
@@ -35,7 +35,7 @@ class TabBarController: UITabBarController {
     }
     
     var shoppingViewController: UINavigationController {
-        let icon = UIImage(named: "cart")
+        let icon = UIImage.init(systemName: "cart")
         let item = UITabBarItem(title: "Orders", image: icon, tag: 0)
         let viewController = ShoppingViewController()
         viewController.tabBarItem = item
@@ -47,7 +47,7 @@ class TabBarController: UITabBarController {
     }
     
     var profileViewController: UINavigationController {
-        let icon = UIImage(named: "person.circle")
+        let icon = UIImage.init(systemName: "person.circle")
         let item = UITabBarItem(title: "Profile", image: icon, tag: 0)
         let viewController = ProfileViewController()
         viewController.tabBarItem = item
